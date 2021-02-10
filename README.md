@@ -334,9 +334,9 @@ Tests inside docker-compose environment
 
 # WEB APP
 
-##Instructions: Follow strictly this order
+## Instructions: Follow strictly this order
 
-###After waiting some minutes while the containers are builded correctly. Go to your web explorer and type the url http://localhost:5000
+### After waiting some minutes while the containers are builded correctly. Go to your web explorer and type the url http://localhost:5000
 
 1) Sign in with the default user admin with password admin123. This users have administration privilegies.
 
