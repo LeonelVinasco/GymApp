@@ -338,24 +338,26 @@ Tests inside docker-compose environment
 
 ### After waiting some minutes while the containers are builded correctly. Go to your web explorer and type the url http://localhost:5000
 
-1) Create a new user with client privileges in SignUp
-
-![diagram](images/signup.png)
-
-2) In the Login tab, Sign in with the default user "admin" with password "admin123". This users have administrator privileges.
+1) In the Login tab, Sign in with the default user "admin" with password "admin123". This users have administrator privileges.
 
 ![diagram](images/signin.png)
 ![diagram](images/2-signin1.png)
 
-3) Insert a new city
+1) Insert a new city
 
 ![diagram](images/3-newcity.png)
 
-4) Insert a new gym
+3) Insert a new gym
 
 ![diagram](images/4-newgym.png)
 
-5) List users from a gym in the datatable
+4) LogOut, then create a new user with client privileges in SignUp
+
+![diagram](images/signup.png)
+
+5) Login again with the administrator credentials (user:admin,pass:admin123)
+
+6) List users from a gym in the datatable
 
 ![diagram](/images/5-list-users.png)
 
