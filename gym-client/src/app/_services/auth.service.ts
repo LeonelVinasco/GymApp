@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http:api:3001';
+const AUTH_API = 'http://localhost:3001';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -17,23 +17,24 @@ export class AuthService {
 
   login(username: string, password: string): Observable<any> {
     console.log(username, password, AUTH_API);
-    return this.http.post("http://api:3001/api/auth/signin", {
+    return this.http.post("http://localhost:3001/api/auth/signin", {
       username,
       password
     }, httpOptions);
   }
 
-  register(username: string, email: string, password: string, gym: number): Observable<any> {
-    return this.http.post("http://api:3001/api/auth/signup", {
+  register(username: string, email: string, password: string, gym: number, admin: boolean): Observable<any> {
+    return this.http.post("http://localhost:3001/api/auth/signup", {
       username,
       email,
       password,
-      gym
+      gym,
+      admin
     }, httpOptions);
   }
 
   getGyms(): Observable<any> {
-    return this.http.get("http://api:3001/api/gyms",httpOptions);
+    return this.http.get("http://localhost:3001/api/gyms",httpOptions);
   }
 
 }
