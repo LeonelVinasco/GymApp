@@ -59,6 +59,21 @@ $ sudo docker-compose up --build
 ```
 Now the 4 containers were builded and are running. api, client, mysql and test.
 
+### Restart
+
+If you stop the docker-compose service, be sure to run the above command to avoid problems with the database data creation:
+
+```
+$ sudo docker-compose down
+
+```
+after that you can run again:
+
+```
+$ sudo docker-compose up --build
+
+```
+
 # API Documentation
 
 This API has 5 POST services and 2 GET services. All responses come in standard JSON. All requests must include a content-type setted as application/json and the body must be valid JSON.
