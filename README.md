@@ -326,10 +326,10 @@ The test container runs the unit test automatically when you run the docker-comp
 
 Tests:
 
-![diagram](testsjest.png)
+![diagram](images/testsjest.png)
 
 Tests inside docker-compose environment
-![diagram](testjest-docker.png)
+![diagram](images/testjest-docker.png)
 
 
 # WEB APP
