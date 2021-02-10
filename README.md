@@ -3,8 +3,6 @@ https://www.getpostman.com/collections/d7c29e476ab294982e75
 
 # Gym Web App
 
-This is the solution for the challenge Fuego de Quasar. The solution consisted in developing a API, now hosted in the Google Cloud Platform, and in a program able to run locally. The solution was developed in NodeJs.
-
 ## Getting Started
 
 These instructions will give you a copy of the project up and running on your local machine for development and testing purposes.
@@ -15,6 +13,7 @@ The software used to develop the application is listed below.
 
 ```
 NodeJS 14.15.0
+Angular 11
 Docker 19.03.12
 Docker-compose 1.26.2
 Git 2.28.0
@@ -39,13 +38,13 @@ Now lets continue with the steps to run the program Fuego de Quasar
 1) Clone the repo. Type on the terminal:
 
 ```
-$ git clone https://github.com/LeonelVinasco/gymwebapp.git
+$ git clone https://github.com/LeonelVinasco/gymapp.git
 ```
 
 2) Go to the main folder
 
 ```
-$ cd gymwebapp
+$ cd gymapp
 ```
 
 ## Run API locally
@@ -59,8 +58,6 @@ $ sudo docker-compose up --build
 
 ```
 Now the 4 containers were builded and are running. api, client, mysql and test.
-
-![diagram](Architecture.jpeg)
 
 # API Documentation
 
@@ -192,7 +189,7 @@ Authorization: Bearer token
 }
 ```
 
-## list Users
+## List Users
 ```
 http://localhost:3001/api/list-users
 ```
@@ -305,15 +302,24 @@ Status: 200
 200: Success
 404: Not Found
 422: Wrong data structure or wrong data type
+500: Server error
 ```
 
 ## Running the tests
 
 The test container runs the unit test automatically when you run the docker-compose command. If you want to add tests, add them to the files ./tests/*.test.js or add a new file *.test.js that the program will automatically run it.
 
+Tests:
+
+![diagram](testsjest.png)
+
+Tests inside docker-compose environment
+![diagram](testsjest-docker.png)
+
 ## Built With
 
 * [NodeJS](https://nodejs.org/es/docs/) - Javascript server side development environment 
+* [Angular](https://angular.io) -  Platform for building mobile and desktop web applications
 * [Express](https://expressjs.com/) - Web application framework for Node. js
 
 
@@ -325,5 +331,5 @@ The test container runs the unit test automatically when you run the docker-comp
 ## Acknowledgments
 
 * To the recruiting company.
-* To the engineers that designed the challenge. It was so funny getting out of job at night this week to play around with this.
+* To the engineers that designed the challenge.
 
