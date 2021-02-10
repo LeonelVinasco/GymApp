@@ -340,16 +340,16 @@ Tests inside docker-compose environment
 
 1) Create a new user with client privileges in SignUp
 
-![diagram](signup.png)
+![diagram](images/signup.png)
 
 2) In the Login tab, Sign in with the default user "admin" with password "admin123". This users have administrator privileges.
 
-![diagram](signin.png)
-![diagram](2-signin1.png)
+![diagram](images/signin.png)
+![diagram](images/2-signin1.png)
 
 3) Insert a new city
 
-![diagram](3-newcity.png)
+![diagram](images/3-newcity.png)
 
 4) Insert a new gym
 
