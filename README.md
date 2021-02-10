@@ -93,7 +93,7 @@ http://localhost:3001/api/auth/signup
 
 **Request:**
 ```json
-POST /topsecret HTTP/1.1
+POST HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -124,7 +124,7 @@ http://localhost:3001/api/auth/signin
 
 **Request:**
 ```js
-POST /topsecret HTTP/1.1
+POST  HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -158,7 +158,7 @@ http://localhost:3001/api/insert-city
 
 **Request:**
 ```js
-POST /topsecret HTTP/1.1
+POST  HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer token
@@ -185,7 +185,7 @@ http://localhost:3001/api/insert-gym
 
 **Request:**
 ```js
-POST /topsecret HTTP/1.1
+POST  HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer token
@@ -214,7 +214,7 @@ http://localhost:3001/api/list-users
 
 **Request:**
 ```js
-POST /topsecret HTTP/1.1
+POST  HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer token
@@ -250,7 +250,7 @@ http://localhost:3001/api/cities
 
 **Request:**
 ```js
-GET /api/cities HTTP/1.1
+GET  HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -285,7 +285,7 @@ http://localhost:3001/api/gyms
 
 **Request:**
 ```js
-GET /api/gyms HTTP/1.1
+GET HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
