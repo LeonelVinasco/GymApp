@@ -314,7 +314,7 @@ Tests:
 ![diagram](testsjest.png)
 
 Tests inside docker-compose environment
-![diagram](testsjest-docker.png)
+![diagram](testjest-docker.png)
 
 ## Built With
 
