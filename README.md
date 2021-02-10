@@ -338,15 +338,14 @@ Tests inside docker-compose environment
 
 ### After waiting some minutes while the containers are builded correctly. Go to your web explorer and type the url http://localhost:5000
 
-1) Sign in with the default user admin with password admin123. This users have administrator privileges.
+1) Create a new user with client privileges in SignUp
+
+![diagram](signup.png)
+
+2) In the Login tab, Sign in with the default user "admin" with password "admin123". This users have administrator privileges.
 
 ![diagram](signin.png)
 ![diagram](2-signin1.png)
-
-
-2) Create a new user with client privileges in SignUp
-
-![diagram](signup.png)
 
 3) Insert a new city
 
