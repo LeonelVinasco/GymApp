@@ -25,3 +25,13 @@ services:
     depends_on: 
       - api
       - mysql
+  client: 
+    build: 
+        context: ./gym-client
+        dockerfile: Dockerfile
+    restart: always
+    depends_on: 
+        - mysql
+        - api
+    ports: 
+        - "4200:4200"

@@ -305,7 +305,7 @@ Status: 200
 500: Server error
 ```
 
-## Running the tests
+## Running the unit tests
 
 The test container runs the unit test automatically when you run the docker-compose command. If you want to add tests, add them to the files ./tests/*.test.js or add a new file *.test.js that the program will automatically run it.
 
@@ -315,6 +315,34 @@ Tests:
 
 Tests inside docker-compose environment
 ![diagram](testjest-docker.png)
+
+
+# WEB APP
+
+Instructions:
+
+1) Sign in with the default user admin with password admin123. This users have administration privilegies.
+
+![diagram](signup.png)
+
+2) Create a new user with client privileges in SignUp
+
+![diagram](signin.png)
+![diagram](2-signin1.png)
+
+3) Insert a new city
+
+![diagram](3-newcity.png)
+
+4) Insert a new gym
+
+![diagram](4-newgym.png)
+
+5) List users from a gym in the datatable
+
+![diagram](5-list-users.png)
+
+
 
 ## Built With
 

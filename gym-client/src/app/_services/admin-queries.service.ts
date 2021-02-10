@@ -17,29 +17,29 @@ export class AdminQueriesService {
 
   insertcity(city: string): Observable<any> {
     console.log(city, AUTH_API);
-    return this.http.post("http://localhost:3001/api/insert-city", {
+    return this.http.post("http://api:3001/api/insert-city", {
       city
     }, httpOptions);
   }
   
   getCities(): Observable<any> {
-    return this.http.get("http://localhost:3001/api/cities",httpOptions);
+    return this.http.get("http://api:3001/api/cities",httpOptions);
   }
 
   getGyms(): Observable<any> {
-    return this.http.get("http://localhost:3001/api/gyms",httpOptions);
+    return this.http.get("http://api:3001/api/gyms",httpOptions);
   }
 
   insertgym(gym: string, city: string): Observable<any> {
     console.log(gym,city);
-    return this.http.post("http://localhost:3001/api/insert-gym", {
+    return this.http.post("http://api:3001/api/insert-gym", {
       gym,
       city
     }, httpOptions);
   }
 
   listusers(id: string): Observable<any> {
-    return this.http.post("http://localhost:3001/api/list-users", {
+    return this.http.post("http://api:3001/api/list-users", {
       id
     }, httpOptions);
   }
