@@ -353,11 +353,11 @@ Tests inside docker-compose environment
 
 4) Insert a new gym
 
-![diagram](4-newgym.png)
+![diagram](images/4-newgym.png)
 
 5) List users from a gym in the datatable
 
-![diagram](5-list-users.png)
+![diagram](/images/5-list-users.png)
 
 
 
