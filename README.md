@@ -32,7 +32,7 @@ You can click on the next links to install the software you need for running thi
 
 ### Download the project
 
-Now lets continue with the steps to run the program Fuego de Quasar 
+Now lets continue with the steps to run the program Gym App 
 
 
 1) Clone the repo. Type on the terminal:
@@ -47,7 +47,7 @@ $ git clone https://github.com/LeonelVinasco/gymapp.git
 $ cd gymapp
 ```
 
-## Run API locally
+## Run locally
 
 Inside the folder
 
