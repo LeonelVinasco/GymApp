@@ -1,0 +1,27 @@
+version: "3.1"
+services:
+  mysql: 
+    image: mysql:5.7.33
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gymdb_test
+  api: 
+    build: 
+        context: ./gym-api
+        dockerfile: Dockerfile
+    restart: always
+    depends_on: 
+        - mysql
+    ports: 
+        - "3001:3001"
+  tests: 
+    build: 
+      context: ./gym-api
+      dockerfile: Dockerfile
+    restart: always
+    command: ["npm", "test"]
+    depends_on: 
+      - api
+      - mysql

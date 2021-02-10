@@ -1,0 +1,17 @@
+ curl -XPOST -H "Content-type: application/json" -d '{
+"user": "admin",
+"pass": "pass1"
+}' 'http://localhost:3000/login'
+
+curl -XPOST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.LnVzZXJOYW1lIiwicGVybWlzc2lvbnMiOlsidXNlciIsInVzZXI6YWRtaW4iLCJ1c2VyOndyaXRlIl0sImlhdCI6MTYxMjU2OTkyOH0.5k3KFhejIxGO8EbTyup1Hmhb2eH_c6bOGEU2voUniWs' -H "Content-type: application/json" 'http://localhost:3000/test'
+
+curl -XPOST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJtaXNzaW9ucyI6WyJ1c2VyIiwidXNlcjphZG1pbiIsInVzZXI6d3JpdGUiXSwiaWF0IjoxNjEyNzA2MTQ5fQ.kWRjVyzk-BXLP5LAYSMAe-X8nqsHdCRdYwPzNyKO7aw' -H "Content-type: application/json" 'http://localhost:3001/test'
+
+<div class="dropdown-menu" >
+          <a class="dropdown-item" href="/admin/newgym" routerLink="insert-city">New Gym</a>
+          <a class="dropdown-item" href="/admin/listusers" routerLink="insert-gym">Users By Gym</a>
+</div>
+
+npx sequelize-cli db:create
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all

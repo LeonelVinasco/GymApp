@@ -1,0 +1,47 @@
+<div class="col-md-6" style="margin:auto">
+    <div class="card card-container" style="margin-top:20%">
+        <h3 style="margin:auto">Register New City</h3><br>
+        <form
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+        
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              class="form-control"
+              name="city"
+              [(ngModel)]="form.city"
+              required
+              minlength="3"
+              maxlength="20"
+              #username="ngModel"
+            />
+            <div class="alert-danger" *ngIf="username.errors && f.submitted">
+              <div *ngIf="username.errors.required">City is required</div>
+              <div *ngIf="username.errors.minlength">
+                City must be at least 3 characters
+              </div>
+              <div *ngIf="username.errors.maxlength">
+                City must be at most 20 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Register new city</button>
+          </div>
+    
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }}
+          </div>
+        </form>
+    
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          City registration is successful!
+        </div>
+      </div>
+    </div>

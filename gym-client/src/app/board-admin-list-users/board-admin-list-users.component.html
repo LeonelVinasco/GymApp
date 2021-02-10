@@ -1,0 +1,54 @@
+
+
+<div class="col-md-6" style="margin:auto">
+    <div class="card card-container" style="margin-top:20%">
+        <h4 style="margin:auto">Choose gym to search users</h4><br>
+        <form
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="sel2">Gym:</label>
+            <select class="form-control" id="sel2" name="city"  [(ngModel)]="form.gym" >
+              <option *ngFor="let one of dataArray"  value="{{one.id}}">{{one?.name}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Search</button>
+          </div>
+        </form>
+    
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          Your search was completed successfully!
+        </div>
+      </div>
+    </div>
+
+
+<div  *ngIf="showTable" class="ui four column doubling stackable grid container">
+    <table class="table table-striped table-bordered dt-responsive nowrap" id="tableEmployees" style="overflow-x:auto;">
+       <thead>
+          <tr>
+             <th>
+                User name
+             </th>
+             <th>
+               E-mail
+            </th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let person of userList"> 
+             <td>
+                {{person?.name}}
+             </td>
+             <td>
+               {{person?.email}}
+            </td>
+          </tr>
+       </tbody>
+    </table>
+ </div>

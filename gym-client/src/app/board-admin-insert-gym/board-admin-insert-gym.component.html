@@ -1,0 +1,49 @@
+<div class="col-md-6" style="margin:auto">
+    <div class="card card-container" style="margin-top:20%">
+        <h3 style="margin:auto">Register New Gym</h3><br>
+        <form
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+        
+          <div class="form-group">
+            <label for="city">New gym name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="gym"
+              [(ngModel)]="form.gym"
+              required
+              minlength="3"
+              maxlength="20"
+              #gym="ngModel"
+            />
+            <div class="alert-danger" *ngIf="gym.errors && f.submitted">
+              <div *ngIf="gym.errors.required">Gym name is required</div>
+              <div *ngIf="gym.errors.minlength">
+                Gym must be at least 3 characters
+              </div>
+              <div *ngIf="gym.errors.maxlength">
+                Gym must be at most 20 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sel2">City:</label>
+            <select class="form-control" id="sel2" name="city"  [(ngModel)]="form.city" >
+              <option *ngFor="let one of dataArray"  value="{{one.id}}">{{one?.name}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block">Register new gym</button>
+          </div>
+        </form>
+    
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          New gym creation is successful!
+        </div>
+      </div>
+    </div>
